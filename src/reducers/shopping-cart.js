@@ -46,7 +46,7 @@ const updateOrder = (state, bookId, quantity) => {
 
   const newItem = updateCartItem(book, item, quantity);
   return {
-    orderTotal: 0,
+    orderTotal: cartItems.reduce((prev, curr) => prev + curr.total, 0),
     cartItems: updateCartItems(cartItems, newItem, itemIndex)
   };
 };
