@@ -1,10 +1,11 @@
 import React from 'react';
 import './shop-header.css';
 import { Link } from 'react-router-dom';
+import {connect} from "react-redux";
 
 const ShopHeader = ({ numItems, total }) => {
-  return (
-    <header className="shop-header row">
+    return (
+        <header className="shop-header row">
       <Link to="/">
         <div className="logo text-dark">ReStore</div>
       </Link>
@@ -15,7 +16,14 @@ const ShopHeader = ({ numItems, total }) => {
         </div>
       </Link>
     </header>
-  );
+    );
 };
 
-export default ShopHeader;
+const mapStateToProps = ({ shoppingCart: { cartItems, orderTotal }}) => {
+    return {
+        numItems: cartItems.length,
+        total: orderTotal
+    }
+};
+
+export default connect(mapStateToProps)(ShopHeader);

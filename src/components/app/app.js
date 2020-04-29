@@ -9,7 +9,7 @@ const App = () => {
   return (
     <main role="main" className="container">
       <ShopHeader numItems={5} total={210}/>
-      <Switch>
+      {/*<Switch>*/}
         <Route
           path="/"
           component={HomePage}
@@ -19,7 +19,7 @@ const App = () => {
           path="/cart"
           component={CartPage}
           />
-      </Switch>
+      {/*</Switch>*/}
     </main>
   );
 };
