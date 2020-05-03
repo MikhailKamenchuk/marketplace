@@ -1,9 +1,11 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ShopHeader from '../shop-header';
-import { HomePage, CartPage } from '../pages';
+import ShopFooter from '../shop-footer';
+import { HomePage, CartPage, CheckoutPage } from '../pages';
 
 import './app.css';
+
 
 const App = () => {
   return (
@@ -19,9 +21,15 @@ const App = () => {
           path="/cart"
           component={CartPage}
           />
+
+        <Route
+          path="checkout"
+          component={CheckoutPage}
       {/*</Switch>*/}
+      <ShopFooter />
     </main>
   );
 };
+
 
 export default App;

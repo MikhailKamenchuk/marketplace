@@ -6,7 +6,10 @@ import {
   bookRemovedFromCart,
   allBooksRemovedFromCart } from '../../actions';
 
+import  SimplePay  from "../pay-buttons/simple-pay-button";  
+import GooglePay from "../pay-buttons/google-pay"
 import './shopping-cart-table.css';
+
 
 const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
   const renderRow = (item, idx) => {
@@ -60,6 +63,11 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
       <div className="total">
         Total: ${total}
       </div>
+
+      {total > 0 && <SimplePay className="payButton" total={total} />}
+      {total > 0 && <GooglePay className="payButton" total={total} />}
+
+        
     </div>
   );
 };

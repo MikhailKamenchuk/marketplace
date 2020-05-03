@@ -1,0 +1,12 @@
+footer div {
+    background-color: #17a2b8;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+ 
+.paymentMethods {    
+    height: 80%; 
+}
+
+

@@ -26,4 +26,5 @@ const mapStateToProps = ({ shoppingCart: { cartItems, orderTotal }}) => {
     }
 };
 
+
 export default connect(mapStateToProps)(ShopHeader);
