@@ -10,7 +10,7 @@ const CheckoutPage = (props) => {
           fields: false,
           title: "my_title",
           link: "https://shop.com",
-          fullScreen: false,
+          fullScreen: true,
           button: true,
           locales: ["ru"],
           email: true,
@@ -37,7 +37,10 @@ const CheckoutPage = (props) => {
         }
       };
       
-      useEffect(() => window.fondy("#app", Options), [])
+      useEffect(() =>{
+        window.fondy("#app", Options)
+        return
+      }, [])
       
   return <>
     <div id='app'></div>

@@ -4,7 +4,7 @@ import PaymentMethods from '../../public/master_visa_fondy_w.png'
 
 const ShopHeader = () => {
     return (
-        <footer className="fixed-bottom">
+        <footer>
             <div>
                 <img className="paymentMethods" src={PaymentMethods} alt="payment methods" />
             </div>
