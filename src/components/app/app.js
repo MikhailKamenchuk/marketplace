@@ -23,8 +23,9 @@ const App = () => {
           />
 
         <Route
-          path="checkout"
+          path="/checkout"
           component={CheckoutPage}
+          />
       {/*</Switch>*/}
       <ShopFooter />
     </main>
